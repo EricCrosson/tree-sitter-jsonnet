@@ -1,0 +1,32 @@
+{
+  "name": "tree-sitter-jsonnet",
+  "version": "0.1.0",
+  "description": "Jsonnet grammar for tree-sitter",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricCrosson/tree-sitter.git"
+  },
+  "keywords": [
+    "parser",
+    "jsonnet",
+    "tree-sitter"
+  ],
+  "author": "Eric Crosson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricCrosson/tree-sitter/issues"
+  },
+  "homepage": "https://github.com/EricCrosson/tree-sitter#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tree-sitter-cli": "^0.20.1"
+  }
+}

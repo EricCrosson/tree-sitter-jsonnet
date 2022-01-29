@@ -1,0 +1,165 @@
+=================================
+should parse double-quoted string
+=================================
+
+"this is a string"
+
+---
+
+(document
+  (expr
+    (string)))
+
+===========================================================
+should parse double-quoted string with escaped double-quote
+===========================================================
+
+"this is a string with an escaped \""
+
+---
+
+(document
+  (expr
+    (string)))
+
+============================================
+should parse multi-line double-quoted string
+============================================
+
+"this is a 
+string with multiple
+newlines"
+
+---
+
+(document
+  (expr
+    (string)))
+
+=================================
+should parse single-quoted string
+=================================
+
+'this is a string'
+
+---
+
+(document
+  (expr
+    (string)))
+
+===========================================================
+should parse single-quoted string with escaped single-quote
+===========================================================
+
+'this is a string with an escaped \''
+
+---
+
+(document
+  (expr
+    (string)))
+
+============================================
+should parse multi-line single-quoted string
+============================================
+
+'this is a 
+string with multiple
+newlines'
+
+---
+
+(document
+  (expr
+    (string)))
+
+==========================================
+should parse double-quoted verbatim string
+==========================================
+
+@"this is a string"
+
+---
+
+(document
+  (expr
+    (string)))
+
+====================================================================
+should parse double-quoted verbatim string with escaped double-quote
+====================================================================
+
+@"this is a string with an escaped "" right there"
+
+---
+
+(document
+  (expr
+    (string)))
+
+=====================================================
+should parse multi-line verbatim double-quoted string
+=====================================================
+
+@"this is a 
+string with multiple
+newlines"
+
+---
+
+(document
+  (expr
+    (string)))
+
+==========================================
+should parse single-quoted verbatim string
+==========================================
+
+@'this is a string'
+
+---
+
+(document
+  (expr
+    (string)))
+
+====================================================================
+should parse single-quoted verbatim string with escaped single-quote
+====================================================================
+
+@'this is a string with an escaped '' right there'
+
+---
+
+(document
+  (expr
+    (string)))
+
+=====================================================
+should parse multi-line single-quoted verbatim string
+=====================================================
+
+@'this is a 
+string with multiple
+newlines'
+
+---
+
+(document
+  (expr
+    (string)))
+
+=======================
+should parse text block
+========================
+
+|||
+  this is a text block
+|||
+
+---
+
+(document
+  (expr
+    (string)))

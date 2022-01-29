@@ -1,0 +1,100 @@
+=======================================
+should parse # as a single-line comment
+=======================================
+
+# 123 is a comment
+
+---
+
+(ERROR)
+
+=====================================================
+should parse # in a document as a single-line comment
+=====================================================
+
+0
+# 123 is a comment
+
+---
+
+(document
+  (expr
+    (number)))
+
+=======================================
+should parse // as a single-line comment
+=======================================
+
+// 123 is a comment
+
+---
+
+(ERROR)
+
+=====================================================
+should parse // in a document as a single-line comment
+=====================================================
+
+// 123 is a comment
+0
+
+---
+
+(document
+  (expr
+    (number)))
+
+==========================================
+should parse /* */ as a multi-line comment
+==========================================
+
+/** 
+ * I don't always comment,
+ * but when I do I like
+ * to make them pretty
+ */
+
+---
+
+(document
+  (expr
+    (MISSING number)))
+
+========================================================
+should parse /* */ in a document as a multi-line comment
+========================================================
+
+/** 
+ * I don't always comment,
+ * but when I do I like
+ * to make them pretty
+ */
+0 
+
+---
+
+(document
+  (expr
+    (number)))
+
+===============================================
+should terminate multi-line comment at first */
+===============================================
+
+/** 
+ * I don't always comment,
+ * but when I do I like
+ * to make them pretty
+ * 
+ * Note that nested comments are not 
+ * handled: /* */
+ */
+0 
+
+---
+
+(document
+  (ERROR
+    (UNEXPECTED '*'))
+  (expr
+    (number)))
