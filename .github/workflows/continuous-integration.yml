@@ -1,6 +1,9 @@
 name: continuous-integration
 
-on: [ pull_request ]
+on: [ pull_request, push ]
+
+# NOTE: I plan to run a different `release` workflow on `push` events
+# when this project is ready to be published to npm
 
 jobs:
   build:
