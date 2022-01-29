@@ -34,11 +34,21 @@
     4:  Add a conflict for these rules: `objinside`, `member`
   ```
   
+  Note this section on the [Jsonnet specification](jsonnet.org/ref/spec.html)
+  
+  > The abstract syntax by itself cannot unambiguously parse a sequence of tokens.
+  > Ambiguities are resolved according to the following rules, which can also be overridden
+  > by adding parenthesis symbols ().
+  >
+  > ...
+  
+  I hope there is a way to express this in tree-sitter but am not sure one way or another
+  at this time.
+  
 - `|||` text blocks require custom parsing to be written in C as an [external scanner]
 
-I started this project as a way to unwind, and have to date have not made much more progress.
-I am happy to accept contributions and/or hand off this code to a party with more interest
-and resources to maintain it.
+I started this project one afternoon as a way to unwind, and have to date have not made much more progress.
+I am happy to accept contributions and/or hand off this code to a party with more interest and resources to maintain it.
 
 Snapshot of my open tabs used as reference:
 
